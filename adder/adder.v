@@ -5,9 +5,6 @@ module adder (
     output logic [4:0] sum
 );
     assign sum = a + b;
-initial begin
-        $dumpfile("dump.vcd");
-        $dumpvars(0, adder);
-    end
+
 
 endmodule

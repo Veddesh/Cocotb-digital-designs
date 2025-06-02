@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1748598836" />
-    <testcase name="adder_basic_test" classname="test_adder" file="/home/veddesh/Cocotb-digital-designs/adder/test_adder.py" lineno="6" time="0.0042078495025634766" sim_time_ns="20.001" ratio_time="4753.259352031277" />
+    <property name="random_seed" value="1748844643" />
+    <testcase name="adder_test" classname="test_adder" file="/home/veddesh/Cocotb-digital-designs/adder/test_adder.py" lineno="6" time="0.00572514533996582" sim_time_ns="0.226" ratio_time="39.474980385624455" />
   </testsuite>
 </testsuites>

@@ -1,18 +1,16 @@
-# test_adder.py
+ 
 import cocotb
+
 from cocotb.triggers import Timer
-import random
 
 @cocotb.test()
-async def adder_basic_test(dut):
-    """Test adder with random inputs"""
-    for _ in range(10):
-        a = random.randint(0, 15)
-        b = random.randint(0, 15)
-        dut.a.value = a
-        dut.b.value = b
+async def adder_test(dut):
+   for a in range(0,15):
+       for b in range(0,15):
+           dut.a.value=a
+           dut.b.value=b
+           await Timer(1,units='ps')
+           c=a+b
+           assert dut.sum.value==a+b, f"Test failed: for the inputs {a} and {b} the expected output is {c} but the value got is {dut.sum.value}"
 
-        await Timer(2, units='ns')
-
-        assert dut.sum.value == a + b, f"Adder result incorrect: {a} + {b} != {dut.sum.value}"
 
